@@ -55,7 +55,7 @@ const list = document.querySelector("#log-list");
 if (list) {
   const entries = Array.isArray(window.logEntries) ? window.logEntries : [];
   if (!entries.length) {
-    list.innerHTML = '<p class="empty-log">資料は順次追加します。次の対話をお待ちください。</p>';
+    list.innerHTML = '<p class="empty-log">紹介型読書会の資料は順次追加します。公開された資料は、ここから閲覧・ダウンロードできます。</p>';
   } else {
     entries.forEach((entry) => {
       const card = document.createElement("article");
@@ -67,13 +67,21 @@ if (list) {
       title.textContent = entry.title;
       const description = document.createElement("p");
       description.textContent = entry.description || "";
-      const link = document.createElement("a");
-      link.href = entry.file;
-      link.target = "_blank";
-      link.rel = "noopener noreferrer";
-      link.className = "text-link";
-      link.innerHTML = 'PDFを開く <span aria-hidden="true">↗</span>';
-      card.append(meta, title, description, link);
+      const actions = document.createElement("div");
+      actions.className = "log-card__actions";
+      const viewLink = document.createElement("a");
+      viewLink.href = entry.file;
+      viewLink.target = "_blank";
+      viewLink.rel = "noopener noreferrer";
+      viewLink.className = "log-action log-action--view";
+      viewLink.innerHTML = '閲覧する <span aria-hidden="true">↗</span>';
+      const downloadLink = document.createElement("a");
+      downloadLink.href = entry.file;
+      downloadLink.download = "";
+      downloadLink.className = "log-action log-action--download";
+      downloadLink.innerHTML = 'PDFをダウンロード <span aria-hidden="true">↓</span>';
+      actions.append(viewLink, downloadLink);
+      card.append(meta, title, description, actions);
       list.append(card);
     });
   }
