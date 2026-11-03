@@ -23,8 +23,9 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--coral); outline
 
 .site-header { position: relative; z-index: 10; border-bottom: 1px solid var(--line); }
 .site-header__inner { display: flex; align-items: center; justify-content: space-between; max-width: 1320px; min-height: 82px; margin: auto; padding: 0 40px; }
-.brand { font-family: var(--serif); font-size: 1.65rem; font-weight: 700; letter-spacing: -.06em; }
+.brand { display: inline-flex; align-items: center; font-family: var(--serif); font-size: 1.65rem; font-weight: 700; letter-spacing: -.06em; line-height: 1; }
 .brand span { color: var(--coral); }
+.brand__logo { display: block; width: 150px; height: auto; mix-blend-mode: multiply; }
 .primary-nav { display: flex; gap: 2.1rem; font-size: .94rem; }
 .primary-nav a { position: relative; padding: .4rem 0; }
 .primary-nav a::after { position: absolute; right: 0; bottom: 0; left: 0; height: 1px; background: var(--ink); content: ""; transform: scaleX(0); transform-origin: right; transition: transform .2s ease; }
@@ -100,6 +101,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--coral); outline
   body { font-size: 16px; }
   .site-header__inner, .hero, .section, .page-intro, .activity, .archive, .log-note, .site-footer__inner { padding-right: 22px; padding-left: 22px; }
   .site-header__inner { min-height: 67px; }
+  .brand__logo { width: 124px; }
   .menu-button { display: block; }
   .primary-nav { position: absolute; top: 67px; right: 0; left: 0; display: none; flex-direction: column; gap: 0; padding: .5rem 22px 1.2rem; background: var(--paper); border-bottom: 1px solid var(--line); }
   .primary-nav.is-open { display: flex; }

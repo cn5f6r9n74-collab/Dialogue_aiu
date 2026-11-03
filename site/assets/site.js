@@ -13,7 +13,9 @@ if (header) {
   header.className = "site-header";
   header.innerHTML = `
     <div class="site-header__inner">
-      <a class="brand" href="index.html" aria-label="Dialogue トップページ">Dialogue<span>.</span></a>
+      <a class="brand" href="index.html">
+        <img class="brand__logo" src="assets/images/dialogue-logo-black.png" alt="Dialogue" />
+      </a>
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-navigation">
         <span class="menu-button__label">Menu</span><span class="menu-button__icon" aria-hidden="true"></span>
       </button>
