@@ -10,6 +10,21 @@
 
 すべてのページのフッターには、入会用Google FormとInstagramへのリンクがあります。
 
+## 紹介型読書会で扱った本を追加する方法
+
+`site/assets/books/introduced-books.js` の先頭に1件追加します。
+
+```js
+{
+  title: "本のタイトル",
+  author: "著者名 著",
+  cover: "書影の画像URL",
+  url: "書籍情報ページのURL",
+},
+```
+
+活動内容ページの「これまでに紹介した本」に、書影・著者名・書籍情報へのリンクが自動で表示されます。
+
 ## 活動LogにPDFを追加する方法
 
 1. PDFを `site/assets/log/` に入れます。ファイル名は半角英数字とハイフンを使うと安全です（例：`2026-11-philosophy.pdf`）。

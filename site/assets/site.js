@@ -51,6 +51,43 @@ if (footer) {
   if (year) year.textContent = new Date().getFullYear();
 }
 
+const introducedBookList = document.querySelector("#introduced-book-list");
+if (introducedBookList) {
+  const books = Array.isArray(window.introducedBooks) ? window.introducedBooks : [];
+  if (!books.length) {
+    introducedBookList.innerHTML = '<p class="empty-book-list">書籍は順次追加します。</p>';
+  } else {
+    books.forEach((book) => {
+      const card = document.createElement("article");
+      card.className = "introduced-book";
+      const coverLink = document.createElement("a");
+      coverLink.className = "introduced-book__cover";
+      coverLink.href = book.url;
+      coverLink.target = "_blank";
+      coverLink.rel = "noopener noreferrer";
+      coverLink.setAttribute("aria-label", `『${book.title}』の書籍情報を開く`);
+      const cover = document.createElement("img");
+      cover.src = book.cover;
+      cover.alt = `『${book.title}』の表紙`;
+      cover.loading = "lazy";
+      coverLink.append(cover);
+      const title = document.createElement("h3");
+      title.textContent = book.title;
+      const author = document.createElement("p");
+      author.className = "introduced-book__author";
+      author.textContent = book.author;
+      const detailLink = document.createElement("a");
+      detailLink.className = "text-link introduced-book__link";
+      detailLink.href = book.url;
+      detailLink.target = "_blank";
+      detailLink.rel = "noopener noreferrer";
+      detailLink.innerHTML = '書籍情報 <span aria-hidden="true">↗</span>';
+      card.append(coverLink, title, author, detailLink);
+      introducedBookList.append(card);
+    });
+  }
+}
+
 const list = document.querySelector("#log-list");
 if (list) {
   const entries = Array.isArray(window.logEntries) ? window.logEntries : [];

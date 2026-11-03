@@ -30,6 +30,14 @@
         </div>
       </section>
 
+      <section class="section introduced-books" aria-labelledby="introduced-books-title">
+        <p class="section-label">Introduction-based reading sessions</p>
+        <h2 id="introduced-books-title">これまでに紹介した本</h2>
+        <p class="introduced-books__lead">紹介をきっかけに、一冊の本から対話を始めてきました。</p>
+        <div id="introduced-book-list" class="introduced-book-grid" aria-live="polite"></div>
+        <noscript><p class="empty-book-list">書籍一覧を表示するには、JavaScriptを有効にしてください。</p></noscript>
+      </section>
+
       <section class="activity activity--two" aria-labelledby="activity-two-title">
         <div class="activity__number" aria-hidden="true">02</div>
         <div class="activity__content">
@@ -83,6 +91,7 @@
       </section>
     </main>
     <footer id="site-footer"></footer>
+    <script src="assets/books/introduced-books.js"></script>
     <script src="assets/site.js"></script>
   </body>
 </html>
