@@ -1,6 +1,7 @@
 /*
   紹介型読書会で扱った本を追加するには、この配列の先頭に1件ずつ追加します。
   title、author、cover、url を記入してください。cover には書影の画像URL、url には書籍情報ページのURLを入れます。
+  資料PDFがある場合は material にサイト内のPDFパスを追加します。
 */
 window.introducedBooks = [
   {
@@ -8,72 +9,84 @@ window.introducedBooks = [
     author: "ウルリッヒ・ベック 著／島村賢一 訳",
     cover: "https://img.hanmoto.com/bd/img/9784480093103_600.jpg",
     url: "https://www.kinokuniya.co.jp/f/dsg-01-9784480093103",
+    material: "assets/books/pdfs/world-risk-society.pdf",
   },
   {
     title: "愛するということ",
     author: "エーリッヒ・フロム 著／鈴木晶 訳",
     cover: "https://img.hanmoto.com/bd/img/9784314011778_600.jpg",
     url: "https://www.kinokuniya.co.jp/f/dsg-01-9784314011778",
+    material: "assets/books/pdfs/art-of-loving.pdf",
   },
   {
     title: "海と毒薬",
     author: "遠藤周作 著",
     cover: "https://img.hanmoto.com/bd/img/9784101123028_600.jpg",
     url: "https://www.kinokuniya.co.jp/f/dsg-01-9784101123028",
+    material: "assets/books/pdfs/sea-and-poison.pdf",
   },
   {
     title: "センスの哲学",
     author: "千葉雅也 著",
     cover: "https://img.hanmoto.com/bd/img/9784163918273_600.jpg",
     url: "https://www.kinokuniya.co.jp/f/dsg-01-9784163918273",
+    material: "assets/books/pdfs/sense-no-tetsugaku.pdf",
   },
   {
     title: "言語の力",
     author: "ビオリカ・マリアン 著",
     cover: "https://img.hanmoto.com/bd/img/9784046063779_600.jpg",
     url: "https://www.kinokuniya.co.jp/f/dsg-01-9784046063779",
+    material: "assets/books/pdfs/power-of-language.pdf",
   },
   {
     title: "現代民主主義",
     author: "山本圭 著",
     cover: "https://img.hanmoto.com/bd/img/9784121026316_600.jpg",
     url: "https://www.kinokuniya.co.jp/f/dsg-01-9784121026316",
+    material: "assets/books/pdfs/contemporary-democracy.pdf",
   },
   {
     title: "日本の思想",
     author: "丸山真男 著",
     cover: "https://img.hanmoto.com/bd/img/9784004120391_600.jpg",
     url: "https://www.kinokuniya.co.jp/f/dsg-01-9784004120391",
+    material: "assets/books/pdfs/thought-in-japan.pdf",
   },
   {
     title: "偶然性・アイロニー・連帯",
     author: "リチャード・ローティ 著",
     cover: "https://img.hanmoto.com/bd/img/9784000004497_600.jpg",
     url: "https://www.kinokuniya.co.jp/f/dsg-01-9784000004497",
+    material: "assets/books/pdfs/contingency-irony-solidarity.pdf",
   },
   {
     title: "悪口ってなんだろう",
     author: "和泉悠 著",
     cover: "https://img.hanmoto.com/bd/img/9784480684592_600.jpg",
     url: "https://www.kinokuniya.co.jp/f/dsg-01-9784480684592",
+    material: "assets/books/pdfs/what-is-insult.pdf",
   },
   {
     title: "ヤバい経済学",
     author: "スティーヴン・D・レヴィット／スティーヴン・J・ダブナー 著",
     cover: "https://img.hanmoto.com/bd/img/9784492313787_600.jpg",
     url: "https://www.kinokuniya.co.jp/f/dsg-01-9784492313787",
+    material: "assets/books/pdfs/freakonomics.pdf",
   },
   {
     title: "なぜ人は締め切りを守れないのか",
     author: "難波優輝 著",
     cover: "https://img.hanmoto.com/bd/img/9784911288207_600.jpg",
     url: "https://www.kinokuniya.co.jp/f/dsg-01-9784911288207",
+    material: "assets/books/pdfs/why-deadlines.pdf",
   },
   {
     title: "リベラリズム",
     author: "宇野重規・加藤晋・井上彰 編",
     cover: "https://img.hanmoto.com/bd/img/9784130331135_600.jpg",
     url: "https://www.kinokuniya.co.jp/f/dsg-01-9784130331135",
+    material: "assets/books/pdfs/liberalism.pdf",
   },
   {
     title: "生きがいについて",
@@ -92,6 +105,7 @@ window.introducedBooks = [
     author: "山田鋭夫 著",
     cover: "https://img.hanmoto.com/bd/img/9784480076700_600.jpg",
     url: "https://www.kinokuniya.co.jp/f/dsg-01-9784480076700",
+    material: "assets/books/pdfs/measuring-prosperity.pdf",
   },
   {
     title: "バカと無知",
@@ -104,6 +118,7 @@ window.introducedBooks = [
     author: "國分功一郎 著",
     cover: "https://img.hanmoto.com/bd/img/9784101035413_600.jpg",
     url: "https://www.kinokuniya.co.jp/f/dsg-01-9784101035413",
+    material: "assets/books/pdfs/ethics-of-leisure-and-boredom.pdf",
   },
   {
     title: "THINK LIKE A MONK",
@@ -122,6 +137,7 @@ window.introducedBooks = [
     author: "小林秀雄・岡潔 著",
     cover: "https://img.hanmoto.com/bd/img/9784101007083_600.jpg",
     url: "https://www.kinokuniya.co.jp/f/dsg-01-9784101007083",
+    material: "assets/books/pdfs/construction-of-human.pdf",
   },
   {
     title: "歴史とは何か",
@@ -134,6 +150,7 @@ window.introducedBooks = [
     author: "金山泰志 著",
     cover: "https://img.hanmoto.com/bd/img/9784121028426_600.jpg",
     url: "https://www.kinokuniya.co.jp/f/dsg-01-9784121028426",
+    material: "assets/books/pdfs/modern-japan-china-sentiment.pdf",
   },
   {
     title: "雪国",
@@ -152,6 +169,7 @@ window.introducedBooks = [
     author: "新渡戸稲造 著",
     cover: "https://img.hanmoto.com/bd/img/9784003311813_600.jpg",
     url: "https://www.hanmoto.com/bd/isbn/9784003311813",
+    material: "assets/books/pdfs/bushido.pdf",
   },
   {
     title: "残像に口紅を",
