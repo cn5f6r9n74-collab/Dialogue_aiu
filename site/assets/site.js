@@ -39,7 +39,7 @@ if (footer) {
     <div class="site-footer__inner">
       <div>
         <a class="brand brand--footer" href="index.html">Dialogue<span>.</span></a>
-        <p>国際教養大学の対話サークル</p>
+        <p>国際教養大学</p>
       </div>
       <div class="footer-links">
         <a href="https://forms.gle/tM5tNzw7RAHFwkZQ9" target="_blank" rel="noopener noreferrer">参加フォーム <span aria-hidden="true">↗</span></a>
