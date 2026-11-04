@@ -82,7 +82,20 @@ if (introducedBookList) {
       detailLink.target = "_blank";
       detailLink.rel = "noopener noreferrer";
       detailLink.innerHTML = '書籍情報 <span aria-hidden="true">↗</span>';
-      card.append(coverLink, title, author, detailLink);
+      const actions = document.createElement("div");
+      actions.className = "introduced-book__actions";
+      actions.append(detailLink);
+      if (book.material) {
+        const materialLink = document.createElement("a");
+        materialLink.className = "text-link introduced-book__link";
+        materialLink.href = book.material;
+        materialLink.target = "_blank";
+        materialLink.rel = "noopener noreferrer";
+        materialLink.type = "application/pdf";
+        materialLink.innerHTML = '紹介資料PDFを開く <span aria-hidden="true">↗</span>';
+        actions.append(materialLink);
+      }
+      card.append(coverLink, title, author, actions);
       introducedBookList.append(card);
     });
   }
